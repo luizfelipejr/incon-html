@@ -1,0 +1,25 @@
+{
+  "name": "incon-html",
+  "version": "1.0.0",
+  "description": "incon-oncologia-html",
+  "main": "./gulpfile.js",
+  "homepage": "http://www.clinicaincon.com.br",
+  "bugs": {
+    "url": "https://github.com/luizfelipejr/incon-html/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizfelipejr/incon-html.git"
+  },
+  "author": "Luiz Felipe Jr<luizfelipejr@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "1.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "node-bourbon": "^4.2.3"
+  }
+}
