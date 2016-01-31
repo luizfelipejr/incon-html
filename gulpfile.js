@@ -1,17 +1,11 @@
 var gulp = require('gulp'),
-  browserSync = require('browser-sync'),
   autoprefixer = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
   bourbon = require('node-bourbon').includePaths,
   neat = require("node-neat").includePaths,
   cssnano = require('gulp-cssnano'),
-  sourcemaps = require('gulp-sourcemaps');
-
-  // Live reload
-  gulp.task('watch', ['browserSync', 'sass'], function() {
-  	gulp.watch('./assets/sass/*.scss', ['sass']);
-  	gulp.watch('./public/*.html').on('change', browserSync.reload);
-  });
+  sourcemaps = require('gulp-sourcemaps'),
+  browserSync = require('browser-sync').create();
 
   // Compile SASS
   gulp.task('sass', () => {
@@ -29,6 +23,22 @@ var gulp = require('gulp'),
     .pipe(browserSync.reload({
       stream: true
     }))
+  });
+
+  // Static server - browserSync
+  gulp.task('browser-sync', function() {
+      browserSync.init({
+          server: {
+              baseDir: "public"
+          }
+      });
+  });
+
+
+  // Live reload
+  gulp.task('watch', ['browser-sync', 'sass'], function() {
+  	gulp.watch('./assets/sass/*.scss', ['sass']);
+  	gulp.watch('./public/*.html').on('change', browserSync.reload);
   });
 
   // Compiles all tasks
