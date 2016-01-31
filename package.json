@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "incon-oncologia-html",
   "main": "./gulpfile.js",
-  "homepage": "http://www.clinicaincon.com.br",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bugs": {
     "url": "https://github.com/luizfelipejr/incon-html/issues"
   },
@@ -11,15 +13,35 @@
     "type": "git",
     "url": "git+https://github.com/luizfelipejr/incon-html.git"
   },
-  "author": "Luiz Felipe Jr<luizfelipejr@outlook.com>",
-  "license": "ISC",
+  "author": [
+    {
+      "name": "Luiz Felipe Jr.",
+      "email": "luizfelipejr@outlook.com",
+      "url": "http://www.luizfelipejr.com.br"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "minify",
+    "css",
+    "sass",
+    "bourbon",
+    "neat",
+    "refills",
+    "gulp"
+  ],
+  "devDependencies": {
+    "gulp-sourcemaps": "^1.5.2",
+    "node-refills": "^1.0.1"
+  },
   "dependencies": {
     "gulp": "^3.9.0",
+    "browser-sync": "^2.11.1",
+    "gulp-cssnano": "^2.1.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-minify-css": "1.2.2",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "node-bourbon": "^4.2.3"
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "node-refills": "^1.0.1"
   }
 }

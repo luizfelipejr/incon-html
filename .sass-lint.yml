@@ -1,41 +1,24 @@
-scss_files: "**/*.scss"
-
-severity: warning
-
 linters:
   BangFormat:
     enabled: true
     space_before_bang: true
     space_after_bang: false
 
-  BemDepth:
-    enabled: false
-
   BorderZero:
-    enabled: true
-    convention: zero
-
-  ChainedClasses:
     enabled: false
 
   ColorKeyword:
     enabled: true
-
-  ColorVariable:
-    enabled: false
+    severity: warning
 
   Comment:
     enabled: true
-    style: silent
 
   DebugStatement:
     enabled: true
 
   DeclarationOrder:
     enabled: true
-
-  DisableLinterReason:
-    enabled: false
 
   DuplicateProperty:
     enabled: true
@@ -51,15 +34,12 @@ linters:
   EmptyRule:
     enabled: true
 
-  ExtendDirective:
-    enabled: false
-
   FinalNewline:
     enabled: true
     present: true
 
   HexLength:
-    enabled: true
+    enabled: false
     style: short
 
   HexNotation:
@@ -69,10 +49,7 @@ linters:
   HexValidation:
     enabled: true
 
-  IdSelector:
-    enabled: true
-
-  ImportantRule:
+  IdWithExtraneousSelector:
     enabled: true
 
   ImportPath:
@@ -82,7 +59,6 @@ linters:
 
   Indentation:
     enabled: true
-    allow_non_nested_indentation: false
     character: space
     width: 2
 
@@ -96,65 +72,44 @@ linters:
 
   NameFormat:
     enabled: true
-    allow_leading_underscore: true
     convention: hyphenated_lowercase
 
   NestingDepth:
     enabled: true
-    max_depth: 3
-    ignore_parent_selectors: false
+    max_depth: 4
+    severity: warning
 
   PlaceholderInExtend:
-    enabled: true
-
-  PropertyCount:
     enabled: false
 
   PropertySortOrder:
     enabled: true
     ignore_unspecified: false
-    min_properties: 2
-    separate_groups: false
+    severity: warning
 
   PropertySpelling:
     enabled: true
     extra_properties: []
-    disabled_properties: []
-
-  PropertyUnits:
-    enabled: true
-    global: [
-      'ch', 'em', 'ex', 'rem',
-      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q',
-      'vh', 'vw', 'vmin', 'vmax',
-      'deg', 'grad', 'rad', 'turn',
-      'ms', 's',
-      'Hz', 'kHz',
-      'dpi', 'dpcm', 'dppx',
-      '%']
-    properties:
-      line-height: []
-
-  PseudoElement:
-    enabled: true
 
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: false
-    allow_element_with_class: false
-    allow_element_with_id: false
+    allow_with_attribute: false
+    allow_with_class: false
+    allow_with_id: false
+    severity: warning
 
   SelectorDepth:
     enabled: true
     max_depth: 2
+    severity: warning
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_BEM
+    convention: hyphenated_lowercase
 
   Shorthand:
     enabled: true
-    allowed_shorthands: [1, 2, 3]
+    severity: warning
 
   SingleLinePerProperty:
     enabled: true
@@ -165,7 +120,6 @@ linters:
 
   SpaceAfterComma:
     enabled: true
-    style: one_space
 
   SpaceAfterPropertyColon:
     enabled: true
@@ -174,17 +128,10 @@ linters:
   SpaceAfterPropertyName:
     enabled: true
 
-  SpaceAfterVariableName:
-    enabled: true
-
-  SpaceAroundOperator:
-    enabled: true
-    style: one_space
-
   SpaceBeforeBrace:
     enabled: true
     style: space
-    allow_single_line_padding: true
+    allow_single_line_padding: false
 
   SpaceBetweenParens:
     enabled: true
@@ -197,14 +144,8 @@ linters:
   TrailingSemicolon:
     enabled: true
 
-  TrailingWhitespace:
-    enabled: true
-
   TrailingZero:
-    enabled: true
-
-  TransitionAll:
-    enabled: true
+    enabled: false
 
   UnnecessaryMantissa:
     enabled: true
@@ -218,18 +159,15 @@ linters:
   UrlQuotes:
     enabled: true
 
-  VariableForProperty:
-    enabled: false
-    properties: []
-
-  VendorPrefix:
+  VendorPrefixes:
     enabled: true
-    identifier_list: base
-    additional_identifiers: []
-    excluded_identifiers: []
+    identifier_list: bourbon
+    include: []
+    exclude: []
 
   ZeroUnit:
     enabled: true
+    severity: warning
 
   Compass::*:
     enabled: false
