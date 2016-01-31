@@ -1,6 +1,5 @@
 @import 'bourbon';
 @import 'neat';
-//@import 'reffils';
 
 @import 'core/variables';
 @import 'core/placeholders';
@@ -11,8 +10,8 @@
 @import 'base/typography';
 @import 'base/buttons';
 
+@import 'modules/main-social-links';
 @import 'modules/main-header';
-@import 'modules/main-topnav';
 @import 'modules/main-banner';
 @import 'modules/main-highlights';
 @import 'modules/main-local';

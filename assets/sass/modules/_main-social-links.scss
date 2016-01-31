@@ -1,0 +1,50 @@
+.nav-social-wrapper {
+  background-color: $core-primary-color;
+  width: 100%;
+  height: 50px;
+}
+
+.nav-social-content {
+  @include clearfix;
+  @include outer-container;
+}
+
+.nav-social-content-network {
+  float: right;
+}
+
+.phone-local {
+  margin-top: 13px;
+  float: left;
+}
+
+.phone-local .phone__title {
+  float: left;
+  max-width: 80px;
+  margin-right: 10px;
+  text-align: right;
+  color: #fed061;
+  font-size: em(13);
+}
+
+.phone-local .phone__number {
+  float: left;
+  color: white;
+  font-size: em(17);
+  margin: 3px 10px 0 0;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.social-icon__facebook {
+  background: url("../img/ico-facebook.svg") no-repeat 50% 50%;
+}
+
+.social-icon__instagram {
+  background-color: #fff;
+  background: url("../img/ico-instagram.svg") no-repeat 50% 50%;
+}

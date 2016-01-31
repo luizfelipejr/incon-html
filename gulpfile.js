@@ -7,39 +7,34 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   browserSync = require('browser-sync').create();
 
-  // Compile SASS
-  gulp.task('sass', () => {
-    return gulp.
-    src('./assets/sass/*.scss')
+// Static Server + watching scss/html files
+gulp.task('watch', ['sass'], function() {
+
+    browserSync.init({
+        server: "./public"
+    });
+
+    gulp.watch("./assets/sass/**/*.scss", ['sass']);
+    gulp.watch("./public/*.html").on('change', browserSync.reload);
+});
+
+// Compile SASS
+gulp.task('sass', () => {
+  return gulp.src("./assets/sass/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: bourbon,
       includePaths: neat
     }))
-    .pipe(autoprefixer('last 4 versions'))
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 9'], { cascade: true }))
     .pipe(cssnano())
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write('./', {
+          includeContent: false,
+          sourceRoot: './assets/sass/**/*.scss'
+      }))
     .pipe(gulp.dest('./public/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-  });
+    .pipe(browserSync.stream({match: '**/*.css'}));
+});
 
-  // Static server - browserSync
-  gulp.task('browser-sync', function() {
-      browserSync.init({
-          server: {
-              baseDir: "public"
-          }
-      });
-  });
-
-
-  // Live reload
-  gulp.task('watch', ['browser-sync', 'sass'], function() {
-  	gulp.watch('./assets/sass/*.scss', ['sass']);
-  	gulp.watch('./public/*.html').on('change', browserSync.reload);
-  });
-
-  // Compiles all tasks
-  gulp.task('default', ['sass']);
+// Compiles all tasks
+gulp.task('default', ['sass']);
