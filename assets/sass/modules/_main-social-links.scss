@@ -2,11 +2,25 @@
   background-color: $core-primary-color;
   width: 100%;
   height: 50px;
+
+  ul li {
+    list-style: none;
+    padding-right: 1em;
+  }
 }
 
 .nav-social-content {
   @include clearfix;
   @include outer-container;
+}
+
+.nav-social-content-phone,
+.nav-social-content-network {
+  margin: 0;
+
+  li {
+    float: left;
+  }
 }
 
 .nav-social-content-network {
