@@ -1,0 +1,99 @@
+.main-highlights {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
+.highlights-wrapper {
+  @include clearfix;
+  @include outer-container;
+  padding: 3em 0;
+}
+
+.highlight {
+  $base-border-color: #c7d4df !default;
+  $base-border-radius: 0 !default;
+  $base-background-color: white !default;
+  $base-spacing: 2em !default;
+  $action-color: $core-primary-color !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $highlight-border-color: $base-border-color;
+  $highlight-border: 0 solid $highlight-border-color;
+  $highlight-background: lighten($highlight-border-color, 10%);
+  $highlight-background: $base-background-color;
+  $highlight-header-background: $highlight-background;
+  $highlight-margin: 1em;
+  $highlight-image-hover-opacity: 0.7;
+  $highlight-image-hover-color: #F8F2B4;
+  $highlight-header-text-color: #5b4c33;
+  $highlight-content-text-color: $core-font-color;
+
+  @include flex-basis(15em);
+  @include flex-grow(1);
+  @include transition (all 0.2s ease-in-out);
+
+  background-color: $highlight-background;
+  border-radius: $base-border-radius;
+  border: $highlight-border;
+  box-shadow: 1px 2px 4px darken($base-border-color, 2%);
+  cursor: pointer;
+  margin: 0 $highlight-margin $base-spacing $highlight-margin;
+  position: relative;
+
+
+  .highlight-image {
+    overflow: hidden;
+    height: 180px;
+    max-height: 180px;
+    background-color: $highlight-image-hover-color;
+
+    img {
+      @include transition (all 0.2s ease-in-out);
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  .highlight-header {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $highlight-header-background;
+    border-bottom: $highlight-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
+    color: $highlight-header-text-color;
+    font-size: 1.4em;
+  }
+
+  .highlight-copy {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
+
+    p {
+      margin: 0 0 ($base-spacing / 2);
+      color: $highlight-content-text-color;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: $highlight-image-hover-opacity;
+    }
+  }
+
+  &:active {
+    background-color: $highlight-background;
+
+    .highlight-header {
+      background-color: $highlight-background;
+    }
+  }
+}
