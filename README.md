@@ -3,8 +3,6 @@
 <p>ICON HTML Project is a initial template for a future CMS project for a client.</p>
 <p>This project includes:</p>
 
-![alt tag](http://i.giphy.com/LBb82vh7x87de.gif)
-
 - HTML5 ready;
 - SASS/CSS using Bourbon, Neat and Refills;
 - Responsive Design (in progress);
@@ -18,3 +16,5 @@
     - <a href='https://github.com/sindresorhus/gulp-autoprefixer' target='_blank'>Autoprefixer</a>
     - <a href='https://github.com/floridoo/gulp-sourcemaps' target='_blank'>Sourcemaps</a>
     - <a href='https://github.com/BrowserSync/browser-sync' target='_blank'>BrowserSync</a>
+
+![alt tag](http://i.imgur.com/I3DqaLl.gifv)
