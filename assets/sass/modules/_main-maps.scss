@@ -5,24 +5,28 @@
 .maps-wrapper {
   @include clearfix;
   @include outer-container;
-  padding: 0 0 3em;
+  @include pad(1.5em 0 default);
 }
 
 
 .map-content {
   @include span-columns(6);
-  @include pad(0 25px default);
 
   h3 {
     font-size: em(26);
+    font-weight: 300;
+    margin-top: 0;
   }
 
   p {
-    letter-spacing: .4px;
-
     .number {
       padding-right: 0.6em;
     }
+  }
+
+  .map-canvas iframe {
+    width: 95%;
+    height: 260px;
   }
 
   @media (max-width: $medium-screen) {

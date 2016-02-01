@@ -5,8 +5,10 @@
 .highlights-wrapper {
   @include clearfix;
   @include outer-container;
-  padding: 3em 0;
+  @include pad(1.5em 0 default);
+}
 
+.highlights-content {
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-between);

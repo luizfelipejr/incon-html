@@ -2,3 +2,10 @@ body {
   font-family: $core-font-stack;
   font-size: $core-font-size;
 }
+
+h2 {
+  font-size: em(32);
+  font-weight: 300;
+  color: #2b628c;
+  margin: 0.5em 0 1.2em;
+}
