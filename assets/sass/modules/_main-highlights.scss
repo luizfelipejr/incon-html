@@ -1,13 +1,15 @@
 .main-highlights {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
+  background-color: $core-secondary-body-background-color;
 }
 
 .highlights-wrapper {
   @include clearfix;
   @include outer-container;
   padding: 3em 0;
+
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
 }
 
 .highlight {
