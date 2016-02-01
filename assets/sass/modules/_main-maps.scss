@@ -1,0 +1,31 @@
+.main-maps {
+  background-color: $core-primary-body-background-color;
+}
+
+.maps-wrapper {
+  @include clearfix;
+  @include outer-container;
+  padding: 0 0 3em;
+}
+
+
+.map-content {
+  @include span-columns(6);
+  @include pad(0 25px default);
+
+  h3 {
+    font-size: em(26);
+  }
+
+  p {
+    letter-spacing: .4px;
+
+    .number {
+      padding-right: 0.6em;
+    }
+  }
+
+  @media (max-width: $medium-screen) {
+    @include span-columns(12);
+  }
+}
