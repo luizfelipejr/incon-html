@@ -17,4 +17,4 @@
     - <a href='https://github.com/floridoo/gulp-sourcemaps' target='_blank'>Sourcemaps</a>
     - <a href='https://github.com/BrowserSync/browser-sync' target='_blank'>BrowserSync</a>
 
-![alt tag](http://i.imgur.com/I3DqaLl.gifv)
+![alt tag](http://i.giphy.com/LBb82vh7x87de.gif)
