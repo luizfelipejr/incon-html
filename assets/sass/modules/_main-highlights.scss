@@ -42,9 +42,8 @@
   border: $highlight-border;
   box-shadow: 1px 2px 4px darken($base-border-color, 2%);
   cursor: pointer;
-  margin: 0 $highlight-margin $base-spacing $highlight-margin;
+  margin: 0 $highlight-margin $base-spacing;
   position: relative;
-
 
   .highlight-image {
     overflow: hidden;
@@ -68,19 +67,22 @@
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: ($base-spacing / 3) ($base-spacing / 2);
+    padding: 0;
     color: $highlight-header-text-color;
     font-size: 1.4em;
     margin: 0;
+    padding: 10px 20px;
+    min-height: 80px;
+    box-sizing: border-box;
   }
 
-  .highlight-copy {
+  .highlight-message {
     font-size: 0.9em;
     line-height: 1.6em;
-    padding: ($base-spacing / 2) ($base-spacing / 2);
+    padding: 10px 30px;
 
     p {
-      margin: 0 0 ($base-spacing / 2);
+      margin: 0;
       color: $highlight-content-text-color;
     }
   }
@@ -88,7 +90,6 @@
   &:focus,
   &:hover {
     cursor: pointer;
-
     img {
       opacity: $highlight-image-hover-opacity;
     }
@@ -96,9 +97,23 @@
 
   &:active {
     background-color: $highlight-background;
-
     .highlight-header {
       background-color: $highlight-background;
     }
   }
+}
+
+.highlight-button {
+  @include transition (all 0.2s ease-in-out);
+  display: inline-block;
+  background: $core-primary-color;
+  color: white;
+  display: block;
+  font-size: 0.875em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+  text-decoration: none;
 }
