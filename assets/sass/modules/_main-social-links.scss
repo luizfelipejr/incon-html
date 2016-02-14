@@ -1,4 +1,6 @@
 .nav-social-wrapper {
+  @include clearfix;
+
   background-color: $core-primary-color;
   width: 100%;
   height: 50px;
@@ -6,6 +8,10 @@
   ul li {
     list-style: none;
     padding-right: 1em;
+  }
+
+  @media (max-width: $medium-screen) {
+    display: none;
   }
 }
 
@@ -17,9 +23,23 @@
 .nav-social-content-phone,
 .nav-social-content-network {
   margin: 0;
+  padding: 0;
 
   li {
     float: left;
+    display: inline;
+  }
+}
+
+.nav-social-content-phone {
+  @media (max-width: $large-screen) {
+    padding-left: em(20);
+  }
+}
+
+.nav-social-content-network {
+  @media (max-width: $large-screen) {
+    padding-right: em(20);
   }
 }
 
@@ -28,7 +48,7 @@
 }
 
 .phone-local {
-  margin-top: 13px;
+  margin-top: 10px;
   float: left;
 }
 

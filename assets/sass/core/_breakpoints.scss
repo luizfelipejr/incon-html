@@ -2,5 +2,7 @@
 //  Breakpoints
 ////////////////////////////////////////////////////////////////////////////////
 
-$medium-screen: 748px;
-$large-screen: 1040px;
+$small-screen: em(479);
+$medium-screen: em(767);
+$large-screen: em(991);
+$xlarge-screen: em(1200);

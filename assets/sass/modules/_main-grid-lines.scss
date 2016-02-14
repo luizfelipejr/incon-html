@@ -1,0 +1,87 @@
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+.grid-items-lines {
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
+  $grid-items-background: $base-background-color;
+  $grid-item-background: $base-background-color;
+  $grid-item-border: 1px solid transparentize($base-font-color, 0.95);
+  $grid-item-columns: 3;
+  $grid-item-big-columns: 8;
+  $grid-item-color: $base-font-color;
+  $grid-item-height: auto;
+  @include clearfix;
+  position: relative;
+
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    background: $grid-item-background;
+    border-bottom: $grid-item-border;
+    border-right: $grid-item-border;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    outline: none;
+    padding: 2em;
+    text-decoration: none;
+    width: 100%;
+
+    @media (min-width: $medium-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    @media (max-width: $medium-screen) {
+      @include grid-item-columns(6);
+    }
+  }
+
+  a.grid-item {
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+
+      background: transparentize($grid-item-color, 0.99);
+
+      img {
+        opacity: 0.20;
+      }
+    }
+  }
+
+
+  .grid-item img {
+    display: block;
+    margin: 0 auto;
+    height: 4.5em;
+  }
+
+  .grid-item h1 {
+    @include clearfix;
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+    text-align: center;
+  }
+  .grid-item p {
+    color: transparentize($grid-item-color, 0.3);
+    line-height: 1.5em;
+    text-align: center;
+    // @include media($medium-screen) {
+    //   max-width: 70%;
+    // }
+  }
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+}

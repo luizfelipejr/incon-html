@@ -9,5 +9,18 @@ body {
   background-color: $core-primary-body-background-color;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-weight: 400;
+}
+
+.highlights-wrapper,
+.maps-wrapper,
+.main-content-wrapper,
+.main-team-wrapper,
+.main-instalacao-wrapper {
+  @include clearfix;
+  @include outer-container;
+  @include pad(1.5em 0 default);
+
+  @media (max-width: $large-screen) {
+    @include pad(2em 3em default);
+  }
 }

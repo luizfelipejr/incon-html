@@ -8,10 +8,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic' rel='stylesheet' type='text/css'> -->
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -20,44 +21,45 @@
   <![endif]-->
 
   <main>
-    <header class="main-navigation" role="banner">
-      <div class="nav-social-wrapper">
-        <div class="nav-social-content">
-          <ul class="nav-social-content-phone">
-            <li class="phone-local">
-              <div class="phone__title">Unidade Vale do Paraíba</div>
-              <div class="phone__number">(12) 3953 4550</div>
-            </li>
-            <li class="phone-local">
-              <div class="phone__title">Unidade Litoral</div>
-              <div class="phone__number">(12) 3953 4550</div>
-            </li>
-          </ul>
+    <div class="nav-social-wrapper">
+      <div class="nav-social-content">
+        <ul class="nav-social-content-phone">
+          <li class="phone-local">
+            <div class="phone__title">Unidade Vale do Paraíba</div>
+            <div class="phone__number">(12) 3953 4550</div>
+          </li>
+          <li class="phone-local">
+            <div class="phone__title">Unidade Litoral</div>
+            <div class="phone__number">(12) 3953 4550</div>
+          </li>
+        </ul>
 
-          <ul class="nav-social-content-network">
-            <li>
-              <a class="social-icon social-icon__facebook" href="#"></a>
-            </li>
-            <li>
-              <a class="social-icon social-icon__instagram" href="#"></a>
-            </li>
-          </ul>
-        </div>
+        <ul class="nav-social-content-network">
+          <li>
+            <a class="social-icon social-icon__facebook" href="#"></a>
+          </li>
+          <li>
+            <a class="social-icon social-icon__instagram" href="#"></a>
+          </li>
+        </ul>
       </div>
+    </div>
+
+    <header class="main-navigation" role="banner">
       <div class="main-navigation-wrapper">
         <a href="#" class="logo">
-          <img src="img/logo-incon.png" alt="INCON">
+          <img src="../assets/img/logo-incon.png" alt="INCON">
         </a>
-        <a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+        <a href="#" class="navigation-menu-button" id="js-mobile-menu"><i class="material-icons">&#xE5D2;</i></a>
         <nav role="navigation">
           <ul id="js-navigation-menu" class="navigation-menu show">
-            <li class="nav-link active"><a href="#">Home</a></li>
-            <li class="nav-link"><a href="#">O Instituto</a></li>
-            <li class="nav-link"><a href="#">Equipe</a></li>
-            <li class="nav-link"><a href="#">Instalações</a></li>
-            <li class="nav-link"><a href="#">Convênios</a></li>
-            <li class="nav-link"><a href="#">Localização</a></li>
-            <li class="nav-link"><a href="#">Contato</a></li>
+            <li class="nav-link active"><a href="index.html">Home</a></li>
+            <li class="nav-link"><a href="o-instituto.html">O Instituto</a></li>
+            <li class="nav-link"><a href="equipe.html">Equipe</a></li>
+            <li class="nav-link"><a href="instalacoes.html">Instalações</a></li>
+            <li class="nav-link"><a href="convenios.html">Convênios</a></li>
+            <li class="nav-link"><a href="localizacao.html">Localização</a></li>
+            <li class="nav-link"><a href="contato.html">Contato</a></li>
             </li>
           </ul>
         </nav>
@@ -76,12 +78,12 @@
     <!-- Highlights -->
     <section class="main-highlights">
       <div class="highlights-wrapper">
-        <h2>Últimos Destaques</h2>
-        <div class="highlights-content">
+        <h2 class="section-header">Últimos Destaques</h2>
 
-          <div class="highlight">
+        <div class="highlights-content">
+          <article class="highlight">
             <div class="highlight-image">
-              <img src="img/highlights/highlight01.jpg" alt="INCON abre um espaço para doação de lenços">
+              <img src="../assets/img/highlights/highlight01.jpg" alt="INCON abre um espaço para doação de lenços">
             </div>
             <h3 class="highlight-header">Conheça o Projeto Carinho</h3>
             <div class="highlight-message">
@@ -90,11 +92,11 @@
             <div class="highlight-action">
               <a href="#" class="highlight-button">Leia mais</a>
             </div>
-          </div>
+          </article>
 
-          <div class="highlight">
+          <article class="highlight">
             <div class="highlight-image">
-              <img src="img/highlights/highlight02.jpg" alt="INCON abre um espaço para doação de lenços">
+              <img src="../assets/img/highlights/highlight02.jpg" alt="INCON abre um espaço para doação de lenços">
             </div>
             <h3 class="highlight-header">INCON abre um espaço para doação de lenços</h3>
             <div class="highlight-message">
@@ -103,11 +105,11 @@
             <div class="highlight-action">
               <a href="#" class="highlight-button">Leia mais</a>
             </div>
-          </div>
+          </article>
 
-          <div class="highlight">
+          <article class="highlight">
             <div class="highlight-image">
-              <img src="img/highlights/highlight03.jpg" alt="10 Passos para uma alimentação Saudável">
+              <img src="../assets/img/highlights/highlight03.jpg" alt="10 Passos para uma alimentação Saudável">
             </div>
             <h3 class="highlight-header">10 Passos para uma alimentação Saudável</h3>
             <div class="highlight-message">
@@ -116,7 +118,7 @@
             <div class="highlight-action">
               <a href="#" class="highlight-button">Leia mais</a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -124,15 +126,17 @@
     <!-- Maps -->
     <section class="main-maps">
       <div class="maps-wrapper">
-        <h2>Onde Estamos</h2>
+        <h2 class="section-header">Onde Estamos</h2>
         <div class="map-content">
           <h3>Unidade Vale do Paraíba</h3>
-          <p class="map-address">Rua Professor Job Aires Dias, 76 - Jacareí / São Paulo</p>
-          <p class="map-phone">
-            <span class="number">(12) 39521094</span>
-            <span class="number">(12) 39534560</span>
-            <span class="number">(12) 39534550</span>
+          <p class="map-address">
+            <i class="material-icons">&#xE0C8;</i> Rua Professor Job Aires Dias, 76 - Jacareí / São Paulo
           </p>
+          <ul class="map-phone">
+            <li class="number"><i class="material-icons">&#xE0CD;</i> (12) 39521094</li>
+            <li class="number"><i class="material-icons">&#xE0CD;</i> (12) 39534560</li>
+            <li class="number"><i class="material-icons">&#xE0CD;</i> (12) 39534550</li>
+          </ul>
           <div class="map-canvas">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.45692586929!2d-45.9633908492617!3d-23.299174857773174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdcb6a57e27211%3A0xbf55528ad31d3f0b!2sINCON-Instituto+de+Cirurgia+e+Oncologia+S%2FC+Ltda!5e0!3m2!1spt-BR!2sbr!4v1454289298144"
             frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -141,11 +145,11 @@
 
         <div class="map-content">
           <h3>Unidade Litoral</h3>
-          <p class="map-address">Rua Professor Job Aires Dias, 76 - Jacareí / São Paulo</p>
-          <p class="map-phone">
-            <span class="number">(12) 39521094</span>
-            <span class="number">(12) 39534560</span>
-          </p>
+          <p class="map-address"><i class="material-icons">&#xE0C8;</i>  Rua Professor Job Aires Dias, 76 - Jacareí / São Paulo</p>
+          <ul class="map-phone">
+            <li class="number"><i class="material-icons">&#xE0CD;</i> (12) 39521094</li>
+            <li class="number"><i class="material-icons">&#xE0CD;</i> (12) 39534560</li>
+          </ul>
           <div class="map-canvas">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.45692586929!2d-45.9633908492617!3d-23.299174857773174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdcb6a57e27211%3A0xbf55528ad31d3f0b!2sINCON-Instituto+de+Cirurgia+e+Oncologia+S%2FC+Ltda!5e0!3m2!1spt-BR!2sbr!4v1454289298144"
             frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -160,9 +164,9 @@
       <div class="footer-wrapper">
 
         <div class="footer-logo">
-          <img src="img/logo-incon-footer.png" alt="INCON">
+          <img src="../assets/img/logo-incon-footer.png" alt="INCON">
         </div>
-        <ul>
+        <ul class="footer-menu">
           <li><a href="#">Home</a></li>
           <li><a href="#">O Instituto</a></li>
           <li><a href="#">Equipe</a></li>
@@ -173,7 +177,14 @@
         </ul>
 
         <div class="footer-secondary-links">
-
+          <ul class="footer-phone">
+            <li>
+              <p><span class="phone__title">Unidade Vale do Paraíba</span> (12) 3953 4550</p>
+            </li>
+            <li>
+              <p><span class="phone__title">Unidade Litoral</span> (12) 3953 4550</p>
+            </li>
+          </ul>
           <ul class="footer-social">
             <li>
               <a class="social-icon social-icon__facebook" href="#"></a>
@@ -183,13 +194,14 @@
             </li>
           </ul>
         </div>
+
       </div>
     </footer>
 
   </main>
 
-  <script src="js/vendor/jquery-1.12.0.min.js"></script>
-  <script src="js/bourbon.js"></script>
+  <script src="../assets/js/vendor/jquery-1.12.0.min.js"></script>
+  <script src="../assets/js/bourbon.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <!-- <script>

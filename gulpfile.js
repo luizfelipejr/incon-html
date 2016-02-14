@@ -1,21 +1,21 @@
 var gulp = require('gulp'),
-  autoprefixer = require('gulp-autoprefixer'),
+  prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
   bourbon = require('node-bourbon').includePaths,
   neat = require("node-neat").includePaths,
-  cssnano = require('gulp-cssnano'),
+  minifyCss = require('gulp-minify-css');
   sourcemaps = require('gulp-sourcemaps'),
   browserSync = require('browser-sync').create();
 
-// Static Server + watching scss/html files
+// Static Server + watching html/css files
 gulp.task('watch', ['sass'], function() {
 
     browserSync.init({
-        server: "./public"
+        server: "./"
     });
 
     gulp.watch("./assets/sass/**/*.scss", ['sass']);
-    gulp.watch("./public/*.html").on('change', browserSync.reload);
+    gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 // Compile SASS
@@ -26,13 +26,13 @@ gulp.task('sass', () => {
       includePaths: bourbon,
       includePaths: neat
     }))
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 9'], { cascade: true }))
-    .pipe(cssnano())
+    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(sourcemaps.write('./', {
           includeContent: false,
           sourceRoot: './assets/sass/**/*.scss'
       }))
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream({match: '**/*.css'}));
 });
 

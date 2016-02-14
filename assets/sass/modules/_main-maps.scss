@@ -2,15 +2,16 @@
   background-color: $core-primary-body-background-color;
 }
 
-.maps-wrapper {
-  @include clearfix;
-  @include outer-container;
-  @include pad(1.5em 0 default);
-}
-
-
 .map-content {
   @include span-columns(6);
+
+  @media (max-width: $large-screen) {
+    @include span-columns(12);
+  }
+
+  @media (max-width: $large-screen) {
+    margin-bottom: 1.5em;
+  }
 
   h3 {
     font-size: em(26);
@@ -18,18 +19,46 @@
     margin-top: 0;
   }
 
-  p {
+  .map-address i {
+    font-size: 18px;
+    top: 4px;
+    position: relative;
+  }
+
+  .map-phone {
+    @include clearfix;
+    list-style: none;
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      float: left;
+      margin: 0.5em 0.5em 0.5em 0;
+      color: $core-font-color;
+      font-weight: 300;
+    }
+
     .number {
       padding-right: 0.6em;
     }
+
+    .number i {
+      font-size: 16px;
+      top: 3px;
+      position: relative;
+      color: $core-primary-color;
+    }
   }
 
-  .map-canvas iframe {
-    width: 95%;
-    height: 260px;
-  }
+  .map-canvas {
 
-  @media (max-width: $medium-screen) {
-    @include span-columns(12);
+    // @media (max-width: $large-screen) {
+    //   margin-bottom: 1em;
+    // }
+
+    iframe {
+      width: 100%;
+      height: 260px;
+    }
   }
 }

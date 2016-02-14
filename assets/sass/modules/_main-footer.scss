@@ -22,9 +22,13 @@
     margin-right: 1em;
     margin-bottom: 1em;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       margin-bottom: 0;
+    }
+
+    @media (max-width: $large-screen) {
+      text-align: center;
     }
   }
 
@@ -33,11 +37,11 @@
   }
 
   ul {
-    line-height: 1.5em;
-    margin: 0 0 1em 0;
+    // line-height: 1.5em;
+    // margin: 0 0 1em 0;
     padding: 0;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       line-height: 1.8em;
       margin: 0.3em 1.3em;
@@ -59,7 +63,7 @@
     color: $footer-link-color;
     text-decoration: none;
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 1em;
 
     &:focus,
     &:hover {
@@ -67,13 +71,39 @@
     }
   }
 
+  .footer-menu {
+    @media (max-width: $large-screen) {
+      display: none;
+    }
+  }
+
   .footer-secondary-links {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: right;
     }
 
     li {
       font-size: 0.8em;
+    }
+
+    ul.footer-phone {
+      display: none;
+
+      p {
+        font-size: em(22);
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+      }
+
+      .phone__title {
+        color: #fed061;
+        text-transform: capitalize;;
+      }
+
+      @media (max-width: $large-screen) {
+        display: block;
+      }
     }
 
     ul.footer-social {
@@ -84,12 +114,23 @@
         margin-top: 0;
       }
 
+      @media (max-width: $large-screen) {
+        @include clearfix;
+        margin: 0 auto;
+        text-align: center;
+      }
+
       li {
         font-size: 0.8em;
         float: left;
+        display: inline;
         line-height: 0;
         margin: 0;
         padding-right: 0.7em;
+
+        @media (max-width: $large-screen) {
+          float: inherit;
+        }
 
         &:last-child {
           padding-right: 0;

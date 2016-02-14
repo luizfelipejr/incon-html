@@ -2,15 +2,26 @@
 //  Typography
 ////////////////////////////////////////////////////////////////////////////////
 
-$core-font-size: 14px;
+$core-font-size: em(14);
 $core-line-height: 20px;
-$core-font-stack: 'Montserrat', sans-serif;
+$core-font-stack: 'Varela Round', sans-serif;
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Colors
 ////////////////////////////////////////////////////////////////////////////////
 
-$core-font-color: #5c6164;
+$core-font-color: #6f8595;
 $core-primary-color: #088cf1;
 $core-primary-body-background-color: #ffffff;
-$core-secondary-body-background-color: rgba(#088cf1, 0.07);
+$core-secondary-body-background-color: rgba(245, 247, 255, 1);
+
+$base-border-radius: 3px !default;
+$base-line-height: 1.7em !default;
+$base-spacing: 1.5em !default;
+$action-color: #036ded !default;
+$dark-gray: #333 !default;
+$light-gray: #DDD !default;
+$base-font-color: $core-font-color !default;
+$sans-serif: 'Nunito', sans-serif;
+$sans-serif-2: 'Varela Round', sans-serif;
+$max-width: 70em;

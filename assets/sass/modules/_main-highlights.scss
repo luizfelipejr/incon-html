@@ -2,12 +2,6 @@
   background-color: $core-secondary-body-background-color;
 }
 
-.highlights-wrapper {
-  @include clearfix;
-  @include outer-container;
-  @include pad(1.5em 0 default);
-}
-
 .highlights-content {
   @include display(flex);
   @include flex-wrap(wrap);
@@ -29,7 +23,7 @@
   $highlight-header-background: $highlight-background;
   $highlight-margin: 1em;
   $highlight-image-hover-opacity: 0.7;
-  $highlight-image-hover-color: #F8F2B4;
+  $highlight-image-hover-color: #ffffff;
   $highlight-header-text-color: #5b4c33;
   $highlight-content-text-color: $core-font-color;
 
@@ -44,6 +38,16 @@
   cursor: pointer;
   margin: 0 $highlight-margin $base-spacing;
   position: relative;
+
+  @media (min-width: $medium-screen) {
+    &:first-of-type {
+      margin-left: 0 !important;
+    }
+
+    &:last-of-type {
+      margin-right: 0 !important;
+    }
+  }
 
   .highlight-image {
     overflow: hidden;
@@ -74,12 +78,16 @@
     padding: 10px 20px;
     min-height: 80px;
     box-sizing: border-box;
+    
+    // @media (max-width: $large-screen) {
+    //   min-height: 110px;
+    // }
   }
 
   .highlight-message {
     font-size: 0.9em;
     line-height: 1.6em;
-    padding: 10px 30px;
+    padding: 0 20px;
 
     p {
       margin: 0;

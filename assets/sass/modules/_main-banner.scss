@@ -13,7 +13,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  //padding-bottom: 3em;
 
   .banner-inner {
     @include outer-container;
@@ -22,8 +21,12 @@
     padding: 12em 0 5em;
     text-align: center;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       min-height: 440px;
+    }
+
+    @media (max-width: $large-screen) {
+      min-height: 320px;
     }
 
     .banner-message {
@@ -31,28 +34,22 @@
 
       h1 {
         color: $banner-color;
-        font-size: 1.6em;
         font-weight: 300;
+        letter-spacing: 0.05em;
         margin-top: 2em;
         margin-bottom: 0.5em;
         text-align: left;
         text-shadow: 1px 1.75px 2px rgba( 92, 92, 92, 0.84);
 
-        @include media($large-screen) {
-          font-size: 2.3em;
-          letter-spacing: .6px;
-          max-width: 45%;
+        @media (min-width: $large-screen) {
+          font-size: em(40);
+          max-width: 50%;
         }
-      }
 
-      p {
-        color: $banner-color;
-        line-height: 1.4em;
-        margin: 0 auto 3em auto;
-
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
+        @media (max-width: $large-screen) {
+          text-align: center;
+          font-size: em(30);
+          padding: 0 1em;
         }
       }
     }
