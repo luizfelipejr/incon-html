@@ -5,8 +5,8 @@
 
 - HTML5 ready;
 - SASS/CSS using Bourbon, Neat and Refills;
-- Responsive Design (in progress);
-- Multiple browsers support (in progress);
+- Responsive Design;
+- Multiple browsers support;
 - <a href='http://gulpjs.com/' target='_blank'>Gulp.js</a> automate workflow includes:
     - <a href="https://github.com/dlmanning/gulp-sass" target='_blank'>Gulp-sass</a>
     - <a href='http://bourbon.io/' target='_blank'>Bourbon</a>
