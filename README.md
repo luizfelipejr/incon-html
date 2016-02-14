@@ -1,6 +1,7 @@
 # INCON html project
 
 <p>ICON HTML Project is a initial template for a future CMS project for a client.</p>
+<p><a href='http://www.luizfelipejr.com.br/projects/incon-html/' target='_blank'>View demo</a></p>
 <p>This project includes:</p>
 
 - HTML5 ready;
@@ -15,4 +16,3 @@
     - <a href='https://github.com/sindresorhus/gulp-autoprefixer' target='_blank'>Autoprefixer</a>
     - <a href='https://github.com/floridoo/gulp-sourcemaps' target='_blank'>Sourcemaps</a>
     - <a href='https://github.com/BrowserSync/browser-sync' target='_blank'>BrowserSync</a>
-
